@@ -18,4 +18,9 @@ class WargaController extends Controller
     {
         return view('warga.create');
     }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }
