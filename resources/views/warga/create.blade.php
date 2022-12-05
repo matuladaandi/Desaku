@@ -7,7 +7,7 @@
             @csrf
             <div class="mb-3">
             <label for="nik" class="form-label">NIK</label>
-            <input type="int" class="form-control" id="nik" name="nik">
+            <input type="text" class="form-control" id="nik" name="nik">
             </div>
 
             <div class="mb-3">
@@ -47,8 +47,8 @@
             </div>
 
             <div class="mb-3">
-            <label for="pekerjaam" class="form-label">Pekerjaan</label>
-            <input type="text" class="form-control" id="pekerjaam" name="pekerjaam">
+            <label for="pekerjaan" class="form-label">Pekerjaan</label>
+            <input type="text" class="form-control" id="pekerjaan" name="pekerjaan">
             </div>
             
             <div class="mb-3">

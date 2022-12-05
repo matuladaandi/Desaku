@@ -21,6 +21,8 @@ class WargaController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        // panggil model warga dan functio create, masukan semua data kecual token dan submit
+        Warga::create($request->except(['_token', 'submit']));
+        return redirect('/');
     }
 }
