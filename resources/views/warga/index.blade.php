@@ -1,3 +1,7 @@
+@extends('layouts.main')
+
+@section('container')
+<a href="/wargaCreate" class="btn btn-primary mt-2">Tambah Warga</a>
 <table class="table table-hover">
     <thead>
       <tr>
@@ -31,3 +35,4 @@
         @endforeach
     </tbody>
   </table>
+@endsection

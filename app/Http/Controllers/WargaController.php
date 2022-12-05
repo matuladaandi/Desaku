@@ -13,4 +13,9 @@ class WargaController extends Controller
         $warga = Warga::all();
         return view('warga.index', compact(['warga']));
     }
+
+    public function create()
+    {
+        return view('warga.create');
+    }
 }
