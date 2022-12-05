@@ -3,7 +3,7 @@
 @section('container')
 
     <div class="col-lg-7">
-        <form action="/store" method="POST">
+        <form action="/wargaStore" method="POST">
             @csrf
             <div class="mb-3">
             <label for="nik" class="form-label">NIK</label>
