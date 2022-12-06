@@ -4,7 +4,7 @@
 
 <h1>Page Edit</h1>
     <div class="col-lg-7">
-        <form action="/{{ $warga->id }}" method="POST">
+        <form action="/wargaEdit/update/{{ $warga->id }}" method="POST">
             @method('put')
             @csrf
             <div class="mb-3">
