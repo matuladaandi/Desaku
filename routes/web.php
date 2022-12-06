@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WargaController::class, 'index']);
 Route::get('/wargaCreate', [WargaController::class, 'create']);
 Route::post('/wargaStore', [WargaController::class, 'store']);
+Route::get('/wargaEdit/{id}', [WargaController::class, 'edit']);

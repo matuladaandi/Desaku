@@ -15,6 +15,7 @@
         <th scope="col">Status Perkawinan</th>
         <th scope="col">Pekerjaan</th>
         <th scope="col">Kewarganegaraan</th>
+        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -31,6 +32,7 @@
             <td>{{ $item->sts_perkawinan }}</td>
             <td>{{ $item->pekerjaan }}</td>
             <td>{{ $item->warganegara }}</td>
+            <td><a href="/wargaEdit/{{ $item->id }}" class="btn btn-secondary">Edit</a></td>
           </tr>
         @endforeach
     </tbody>

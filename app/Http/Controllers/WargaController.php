@@ -25,4 +25,10 @@ class WargaController extends Controller
         Warga::create($request->except(['_token', 'submit']));
         return redirect('/');
     }
+
+    public function edit($id)
+    {
+        $warga = Warga::find($id);
+        return view('warga.edit', compact(['warga']));
+    }
 }
