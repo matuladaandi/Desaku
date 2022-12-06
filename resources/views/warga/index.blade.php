@@ -33,7 +33,7 @@
             <td>{{ $item->pekerjaan }}</td>
             <td>{{ $item->warganegara }}</td>
             <td><a href="/wargaEdit/{{ $item->id }}" class="btn btn-secondary">Edit</a></td>
-            <td><a href="/wargaDelete/{{ $item->id }}" class="btn btn-danger">Delete</a></td>
+            <td><a href="/wargaDelete/{{ $item->id }}" onclick="return confirm('yakin hapus?')" class="btn btn-danger">Delete</a></td>
           </tr>
         @endforeach
     </tbody>
