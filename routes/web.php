@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WargaController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,6 @@ Route::post('/wargaStore', [WargaController::class, 'store']);
 Route::get('/wargaEdit/{id}', [WargaController::class, 'edit']);
 Route::put('/wargaEdit/update/{id}', [WargaController::class, 'update']);
 Route::get('/wargaDelete/{id}', [WargaController::class, 'delete']);
+
+Route::get('/login', [LoginController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
