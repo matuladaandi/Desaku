@@ -4,7 +4,7 @@
 @section('container')
 
     <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-lg-4">
             <main class="form-signin w-100 m-auto">
                 <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
                 <form>
@@ -23,7 +23,7 @@
                     <input type="checkbox" value="remember-me"> Remember me
                     </label>
                 </div> --}}
-                <button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Login in</button>
+                <button class="w-100 btn btn-lg btn-primary mb-2" type="submit">Login</button>
                 {{-- <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p> --}}
                 </form>
                 <small class="d-block text-center">Not Register? <a href="/register">Register Now!</a></small>
