@@ -22,7 +22,7 @@
         @foreach ($warga as $item)
         <tr>
             {{-- <td>{{ $item-> }}</td> --}}
-            <td>1</td>
+            <td>01</td>
             <td>{{ $item->nik }}</td>
             <td>{{ $item->nama }}</td>
             <td>{{ $item->ttl }}</td>
