@@ -21,8 +21,7 @@
     <tbody>
         @foreach ($warga as $item)
         <tr>
-            {{-- <td>{{ $item-> }}</td> --}}
-            <td>01</td>
+            <td>{{ $loop->iteration }}</td>
             <td>{{ $item->nik }}</td>
             <td>{{ $item->nama }}</td>
             <td>{{ $item->ttl }}</td>
