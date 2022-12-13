@@ -25,4 +25,24 @@ class MidtestController extends Controller
         Midtest::create($request->except(['_token', 'submit']));
         return redirect('/midtest');
     }
+
+    public function edit($id)
+    {
+        $data = Midtest::find($id);
+        return view('folmidtest.midtestedit', compact(['data']));
+    }
+
+    public function update($id, Request $request)
+    {
+        $data = Midtest::find($id);
+        $data->update($request->except(['_token', 'submit']));
+        return redirect('/midtest');
+    }
+
+    public function delete($id)
+    {
+        $data = Midtest::find($id);
+        $data->delete();
+        return redirect('/midtest');
+    }
 }

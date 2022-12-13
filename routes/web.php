@@ -42,3 +42,6 @@ Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware
 Route::get('/midtest', [MidtestController::class, 'index']);
 Route::get('/create', [MidtestController::class, 'create']);
 Route::post('/store', [MidtestController::class, 'store']);
+Route::get('/edit/{id}', [MidtestController::class, 'edit']);
+Route::put('/edit/update/{id}', [MidtestController::class, 'update']);
+Route::get('/delete/{id}', [MidtestController::class, 'delete']);
