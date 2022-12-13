@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardWargaController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MidtestController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\WargaController;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +37,5 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
+
+Route::get('/midtest', [MidtestController::class, 'index']);
