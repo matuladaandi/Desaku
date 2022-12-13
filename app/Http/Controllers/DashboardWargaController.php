@@ -36,7 +36,16 @@ class DashboardWargaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'nik' => 'required|unique:wargas',
+            'nama' => 'required',
+            'ttl' => 'required',
+            'j_klmn' => 'required',
+            'alamat' => 'required',
+            'agama' => 'required',
+            'sts_perkawinan' => 'required',
+            'warganegara' => 'required'
+        ]);
     }
 
     /**
