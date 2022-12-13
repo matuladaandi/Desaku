@@ -18,4 +18,11 @@ class MidtestController extends Controller
     {
         return view('folmidtest.midtestcreate');
     }
+
+    public function store(Request $request)
+    {
+        // panggil model Midtest dan function create, masukan semua data kecuali token dan submit
+        Midtest::create($request->except(['_token', 'submit']));
+        return redirect('/midtest');
+    }
 }

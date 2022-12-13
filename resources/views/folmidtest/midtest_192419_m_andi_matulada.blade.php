@@ -3,22 +3,27 @@
 @section('container')
 
     <h3>midtest 192419 M. Andi Matulada</h3>
-    <div class="col-lg-7">
-        <form action="/wargaStore" method="POST">
-            @csrf       
-            <div class="mb-3">
-            <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" name="nama">
-            </div>
-
-            <div class="mb-3">
-            <label for="agama" class="form-label">Agama</label>
-            <input type="text" class="form-control" id="agama" name="agama">
-            </div>
-
-            <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="/" class="btn btn-warning">Batal</a>
-        </form>
-    </div>
-
+    <a href="/create" class="btn btn-primary mt-2">Tambah Data Warga</a>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Agama</th>
+            <th scope="col">Aksi</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach ($data as $item)
+            <tr>
+                <td>{{ $loop->iteration }}</td>
+                <td>{{ $item->nama }}</td>
+                <td>{{ $item->agama }}</td>
+                <td><a href="/edit/{{ $item->id }}" class="btn btn-secondary">Edit</a></td>
+                <td><a href="/delete/{{ $item->id }}" onclick="return confirm('yakin hapus?')" class="btn btn-danger">Delete</a></td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+   
 @endsection

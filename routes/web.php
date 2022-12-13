@@ -38,4 +38,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
 
+// midtest
 Route::get('/midtest', [MidtestController::class, 'index']);
+Route::get('/create', [MidtestController::class, 'create']);
+Route::post('/store', [MidtestController::class, 'store']);

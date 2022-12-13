@@ -3,7 +3,7 @@
 @section('container')
 
     <div class="col-lg-7">
-        <form action="/wargaStore" method="POST">
+        <form action="/store" method="POST">
             @csrf
             <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
@@ -15,7 +15,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="/" class="btn btn-warning">Batal</a>
+            <a href="/midtest" class="btn btn-warning">Batal</a>
         </form>
     </div>
 
