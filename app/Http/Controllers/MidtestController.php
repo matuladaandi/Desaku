@@ -11,7 +11,11 @@ class MidtestController extends Controller
     {
         // $data harus sama dgn compact data, compact = artinya lemparkan data  
         $data = Midtest::all();
-        dd($data);
         return view('folmidtest.midtest_192419_m_andi_matulada', compact(['data']));
+    }
+
+    public function create()
+    {
+        return view('folmidtest.midtestcreate');
     }
 }
