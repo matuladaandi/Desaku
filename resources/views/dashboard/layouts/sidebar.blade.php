@@ -9,7 +9,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {{ Request::is('dashboard/warga')? 'active' : '' }}" href="/dashboard/warga">
+          <a class="nav-link {{ Request::is('dashboard/warga*')? 'active' : '' }}" href="/dashboard/warga">
             <span data-feather="file-text" class="align-text-bottom"></span>
             Warga
           </a>

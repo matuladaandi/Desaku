@@ -18,6 +18,7 @@
     </div>
 
     <div class="table-responsive">
+        <a href="/dashboard/warga/create" class="btn btn-primary mb-3">Tambah Warga</a>
         <table class="table table-striped table-sm">
             <thead>
                 <tr>

@@ -25,7 +25,7 @@ class DashboardWargaController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.warga.create');
     }
 
     /**
