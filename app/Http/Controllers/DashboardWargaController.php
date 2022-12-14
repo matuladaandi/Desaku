@@ -44,8 +44,12 @@ class DashboardWargaController extends Controller
             'alamat' => 'required',
             'agama' => 'required',
             'sts_perkawinan' => 'required',
+            'pekerjaan' => 'required',
             'warganegara' => 'required'
         ]);
+
+        Warga::create($validatedData);
+        return redirect('dashboard/warga')->with('success', 'Data Warga Berhasil ditambahkan');
     }
 
     /**
