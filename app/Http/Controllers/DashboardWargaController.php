@@ -71,7 +71,8 @@ class DashboardWargaController extends Controller
      */
     public function edit(Warga $warga)
     {
-        //
+        $warga = Warga::all();
+        return view('dashboard.warga.edit', compact(['warga']));
     }
 
     /**
@@ -82,6 +83,7 @@ class DashboardWargaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Warga $warga)
+    //  $request itu data baru yg krim, sedangkan $warga adalah data lama
     {
         //
     }
@@ -94,6 +96,8 @@ class DashboardWargaController extends Controller
      */
     public function destroy(Warga $warga)
     {
-        //
+
+        Warga::destroy($warga->id);
+        return redirect('/dashboard/warga')->with('success', 'Data Warga Berhasil Hapus');
     }
 }
