@@ -40,7 +40,7 @@
 
             <div class="mb-3">
                 <select name="sts_perkawinan" id="sts_perkawinan">
-                    <option value="">Status Perkawinan</option>
+                    <option value="">Pilih Status Perkawinan</option>
                     <option value="S">Sudah Kawin</option>
                     <option value="B">Belum Kawin</option>
                 </select>

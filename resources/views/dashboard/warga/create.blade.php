@@ -46,11 +46,8 @@
             <div class="mb-3">
                 <select name="j_klmn" id="j_klmn">
                     <option value="">Pilih Jenis Kelamin</option>
-                    @if (old('j_klmn') == 'L' )
-                        <option value="L">Laki-Laki</option>
-                    @else 
-                        <option value="P">Perempuan</option>
-                    @endif
+                    <option value="L">Laki-Laki</option>
+                    <option value="P">Perempuan</option>
                 </select>
             </div>
     
@@ -76,12 +73,9 @@
     
             <div class="mb-3">
                 <select name="sts_perkawinan" id="sts_perkawinan">
-                    <option value="">Status Perkawinan</option>
-                    @if (old('sts_perkawinan')== 'S')
-                        <option value="S">Sudah Kawin</option>
-                    @else
-                        <option value="B">Belum Kawin</option>
-                    @endif
+                    <option value="">Pilih Status Perkawinan</option>
+                    <option value="S">Sudah Kawin</option>
+                    <option value="B">Belum Kawin</option>
                 </select>
             </div>
     
