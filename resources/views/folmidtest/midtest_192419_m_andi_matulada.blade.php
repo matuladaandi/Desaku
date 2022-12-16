@@ -10,6 +10,7 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">Agama</th>
+            <th scope="col">Jenis Kelamin</th>
             <th scope="col">Aksi</th>
         </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $item->nama }}</td>
                 <td>{{ $item->agama }}</td>
+                <td>{{ $item->jk }}</td>
                 <td><a href="/edit/{{ $item->id }}" class="btn btn-secondary">Edit</a></td>
                 <td><a href="/delete/{{ $item->id }}" onclick="return confirm('yakin hapus?')" class="btn btn-danger">Delete</a></td>
             </tr>

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('midtests', function (Blueprint $table) {
             $table->string('nama');
             $table->string('agama');
+            $table->enum('jk', ['L', 'P']);
             $table->id();
             $table->timestamps();
         });

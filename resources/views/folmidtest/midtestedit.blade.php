@@ -18,6 +18,18 @@
             <input type="text" class="form-control" id="agama" name="agama" value="{{ $data->agama }}">
             </div>
 
+            <div class="mb-3">
+                <select name="jk" id="jk">
+
+                    <option value="L" @if ($data->jk == "L")
+                    {{ 'selected="selected"' }}
+                    @endif>Laki-Laki</option>
+                    <option value="P"  @if ($data->jk == "P")
+                    {{ 'selected="selected"' }}
+                    @endif>Perempuan</option>
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="/midtest" class="btn btn-warning">Batal</a>
         </form>

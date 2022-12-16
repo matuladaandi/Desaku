@@ -14,6 +14,15 @@
             <input type="text" class="form-control" id="agama" name="agama">
             </div>
 
+            <div class="mb-3">
+                <select name="jk" id="jk">
+                    <option value="">Pilih Jenis Kelamin</option>
+                    <option value="L">Laki-Laki</option>
+                    <option value="P">Perempuan</option>
+                </select>
+            </div>
+
+
             <button type="submit" class="btn btn-primary">Simpan</button>
             <a href="/midtest" class="btn btn-warning">Batal</a>
         </form>
