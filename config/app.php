@@ -108,7 +108,8 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    // yg akan dipakai di env dulu yakni yg FAKER_LOCALE yg berada di file .env
+    'faker_locale' => env('FAKER_LOCALE', 'en_US'),
 
     /*
     |--------------------------------------------------------------------------

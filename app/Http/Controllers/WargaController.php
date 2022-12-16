@@ -11,6 +11,9 @@ class WargaController extends Controller
     {
         // $warga harus sama dgn compact warga, compact = artinya lemparkan data  
         $warga = Warga::all();
+
+        // yg terakhir yg akan berada di atas
+        // $warga = Warga::latest()->get;
         return view('warga.index', compact(['warga']));
     }
 
