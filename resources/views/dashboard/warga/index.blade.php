@@ -55,7 +55,7 @@
                     <td>{{ $item->pekerjaan }}</td>
                     <td>{{ $item->warganegara }}</td>
                     <td>
-                        <a href="/dashboard/warga/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                        <a href="/dashboard/warga/{{ $item->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
 
                         <form action="/dashboard/warga/{{ $item->id }}" method="POST" class="d-inline">
                             {{-- @method('delete') dia akan memaksa utk menjalankan nya metdod delete --}}

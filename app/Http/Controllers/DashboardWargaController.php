@@ -69,9 +69,9 @@ class DashboardWargaController extends Controller
      * @param  \App\Models\Warga  $warga
      * @return \Illuminate\Http\Response
      */
-    public function edit(Warga $warga)
+    public function edit($id)
     {
-        $warga = Warga::all();
+        $warga = Warga::find($id);
         return view('dashboard.warga.edit', compact(['warga']));
     }
 
