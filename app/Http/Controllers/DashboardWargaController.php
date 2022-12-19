@@ -37,7 +37,7 @@ class DashboardWargaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nik' => 'required|unique:wargas',
+            'nik' => 'required|unique:wargas|numeric',
             'nama' => 'required',
             'ttl' => 'required',
             'j_klmn' => 'required',
@@ -83,9 +83,25 @@ class DashboardWargaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Warga $warga)
-    //  $request itu data baru yg krim, sedangkan $warga adalah data lama
+    //  $request itu data baru yg krim, sedangkan $warga adalah data lama yg sudah ada ditabel kita 
     {
-        //
+        $rules = [
+            'nama' => 'required',
+            'ttl' => 'required',
+            'j_klmn' => 'required',
+            'alamat' => 'required',
+            'agama' => 'required',
+            'sts_perkawinan' => 'required',
+            'pekerjaan' => 'required',
+            'warganegara' => 'required'
+        ];
+        if ($request->nik != $warga->nik) {
+            $rules['nik'] = 'required|numeric';
+        }
+        $validatedData = $request->validate($rules);
+        Warga::where('id', $warga->id)
+            ->update($validatedData);
+        return redirect('dashboard/warga')->with('success', 'Data Warga Berhasil diperbaharui');
     }
 
     /**

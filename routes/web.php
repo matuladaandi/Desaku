@@ -34,5 +34,7 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
+// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index']);
+// Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
+Route::resource('/dashboard/warga', DashboardWargaController::class);

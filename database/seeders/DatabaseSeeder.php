@@ -18,12 +18,23 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::create([
+            'name' => 'andi',
+            'username' => 'andi12',
+            'email' => 'matuladaandi@gmail.com',
+            'password' => bcrypt('password')
+        ]);
 
-        // mencoba menjalankan data faker/palsu
-        // Warga::factory(20)->create();
+        Warga::create([
+            'nik' => '153416231235',
+            'nama' => 'andi',
+            'ttl' => 'Dompu, 06 April 2000',
+            'j_klmn' => 'L',
+            'alamat' => 'Desa oo',
+            'agama' => 'islam',
+            'sts_perkawinan' => 'B',
+            'pekerjaan' => 'mahasiswa',
+            'warganegara' => 'indonesia'
+        ]);
     }
 }

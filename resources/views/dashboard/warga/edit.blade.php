@@ -11,7 +11,7 @@
     </div>
 
     <div class="col-lg-8">
-        <form action="/dashboard/warga" method="POST">
+        <form action="/dashboard/warga/{{ $warga->id }}" method="POST">
             @method('put')
             @csrf
             <div class="mb-3">
