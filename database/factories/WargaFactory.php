@@ -17,6 +17,7 @@ class WargaFactory extends Factory
     public function definition()
     {
         return [
+
             // 'nik' => $this->faker->nik(),
             // 'nama' => $this->faker->name(),
             // 'ttl' => $this->faker->randomDigit(),
@@ -25,7 +26,8 @@ class WargaFactory extends Factory
             // 'agama' => $this->faker->city(),
             // 'sts_perkawinan' => $this->faker->phoneNumber(),
             // 'pekerjaan' => $this->faker->jobTitle(),
-            // 'warganegara' => $this->faker->country()
+            // 'warganegara' => $this->faker->country(),
+            // 'angka' => $this->faker->randomDigit()
         ];
     }
 }
