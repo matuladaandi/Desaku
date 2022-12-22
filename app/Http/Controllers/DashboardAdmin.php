@@ -36,7 +36,6 @@ class DashboardAdmin extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
