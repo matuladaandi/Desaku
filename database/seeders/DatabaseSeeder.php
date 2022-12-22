@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use \App\Models\User;
+use \App\Models\Warga;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,11 +16,49 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // membuat 10 data palsu di warga
+        Warga::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
+        // User::factory(10)->create();
+        // membuat data palsu
+        // User::create([
+        //     'name' => 'andi',
+        //     'username' => 'andi12',
+        //     'email' => 'matuladaandi@gmail.com',
+        //     'password' => bcrypt('password')
         // ]);
+
+        // Warga::create([
+        //     'nik' => '153416231235',
+        //     'nama' => 'andi',
+        //     'ttl' => 'Dompu, 06 April 2000',
+        //     'j_klmn' => 'L',
+        //     'alamat' => 'Desa oo',
+        //     'agama' => 'islam',
+        //     'sts_perkawinan' => 'B',
+        //     'pekerjaan' => 'mahasiswa',
+        //     'warganegara' => 'indonesia'
+        // ]);
+
+        // User::create([
+        //     'name' => 'andi2',
+        //     'username' => 'andi122',
+        //     'email' => 'matuladaandi2@gmail.com',
+        //     'password' => bcrypt('password')
+        // ]);
+
+        // Warga::create([
+        //     'nik' => rand(2, 50),
+        //     'nama' => 'dayats',
+        //     'ttl' => 'Dompu, 06 April 2000',
+        //     'j_klmn' => 'L',
+        //     'alamat' => 'Desa oo',
+        //     'agama' => 'islam',
+        //     'sts_perkawinan' => 'S',
+        //     'pekerjaan' => 'mahasiswa',
+        //     'warganegara' => 'indonesia'
+        // ]);
+
+
     }
 }

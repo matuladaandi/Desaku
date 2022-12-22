@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardAdmin;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardWargaController;
 use App\Http\Controllers\LoginController;
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// warga home
 Route::get('/', [WargaController::class, 'index']);
 Route::get('/wargaCreate', [WargaController::class, 'create']);
 Route::post('/wargaStore', [WargaController::class, 'store']);
@@ -27,15 +28,20 @@ Route::get('/wargaEdit/{id}', [WargaController::class, 'edit']);
 Route::put('/wargaEdit/update/{id}', [WargaController::class, 'update']);
 Route::get('/wargaDelete/{id}', [WargaController::class, 'delete']);
 
+// login
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-
+//register
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
+// dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::resource('/dashboard/warga', DashboardWargaController::class)->except('show')->middleware('auth');
+Route::resource('/dashboard/user', DashboardAdmin::class)->except('show')->middleware('admin');
+
 Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
 
 // midtest

@@ -17,6 +17,12 @@
            
     </div>
 
+    @if (session()->has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>    
+    @endif
+
     <div class="table-responsive">
         <a href="/dashboard/warga/create" class="btn btn-primary mb-3">Tambah Warga</a>
         <table class="table table-striped table-sm">
@@ -49,8 +55,14 @@
                     <td>{{ $item->pekerjaan }}</td>
                     <td>{{ $item->warganegara }}</td>
                     <td>
-                        <a href="#" class="badge bg-warning"><span data-feather="edit"></span></a>
-                        <a href="#" class="badge bg-danger"><span data-feather="x"></span></a>
+                        <a href="/dashboard/warga/{{ $item->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+
+                        <form action="/dashboard/warga/{{ $item->id }}" method="POST" class="d-inline">
+                            {{-- @method('delete') dia akan memaksa utk menjalankan nya metdod delete --}}
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="badge bg-danger border-0" onclick="return confirm('Anda Yakin ingin Hapus?')"><span data-feather="x"></span></button>
+                        </form>
                     </td>
                     </tr>   
                 @endforeach
