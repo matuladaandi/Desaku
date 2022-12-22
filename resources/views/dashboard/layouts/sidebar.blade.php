@@ -16,14 +16,17 @@
         </li>
       </ul>
 
-      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-        <span>Administrator</span>
-      </h6>
-      <ul class="nav flex-column">
-        <a class="nav-link {{ Request::is('dashboard/user*')? 'active' : '' }}" href="/dashboard/user">
-          <span data-feather="user-plus" class="align-text-bottom"></span>
-          User
-        </a>
-      </ul>
+      {{-- page ini hanya bisa di akses oleh admin yg sudh di atur di AppServiceProvider --}}
+      @can('admin')
+        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          <span>Administrator</span>
+        </h6>
+        <ul class="nav flex-column">
+          <a class="nav-link {{ Request::is('dashboard/user*')? 'active' : '' }}" href="/dashboard/user">
+            <span data-feather="user-plus" class="align-text-bottom"></span>
+            User
+          </a>
+        </ul>
+      @endcan
     </div>
 </nav>

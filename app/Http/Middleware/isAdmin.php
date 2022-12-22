@@ -17,7 +17,7 @@ class isAdmin
     public function handle(Request $request, Closure $next)
     {
         // middleware admin,
-        if (auth()->guest() || auth()->user()->username !== 'andi12') {
+        if (auth()->guest() || !auth()->user()->is_admin) {
             abort(403);
         }
         return $next($request);
