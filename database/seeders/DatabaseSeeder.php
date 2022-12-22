@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // membuat 10 data palsu di warga
         Warga::factory(10)->create();
+
         // User::factory(10)->create();
         // membuat data palsu
         // User::create([

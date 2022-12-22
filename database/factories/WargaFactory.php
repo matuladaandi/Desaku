@@ -18,7 +18,7 @@ class WargaFactory extends Factory
     {
 
         return [
-
+            // membuat data palsu di warga
             'nik' => $this->faker->nik(),
             'nama' => $this->faker->name(),
             'ttl' => $this->faker->randomDigit(),
