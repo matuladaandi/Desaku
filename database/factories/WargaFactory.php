@@ -16,18 +16,18 @@ class WargaFactory extends Factory
      */
     public function definition()
     {
+
         return [
 
-            // 'nik' => $this->faker->nik(),
-            // 'nama' => $this->faker->name(),
-            // 'ttl' => $this->faker->randomDigit(),
-            // 'j_klmn' => $this->faker->phoneNumber(),
-            // 'alamat' => $this->faker->streetAddress(),
-            // 'agama' => $this->faker->city(),
-            // 'sts_perkawinan' => $this->faker->phoneNumber(),
-            // 'pekerjaan' => $this->faker->jobTitle(),
-            // 'warganegara' => $this->faker->country(),
-            // 'angka' => $this->faker->randomDigit()
+            'nik' => $this->faker->nik(),
+            'nama' => $this->faker->name(),
+            'ttl' => $this->faker->randomDigit(),
+            'j_klmn' => $this->faker->randomElement(['L', 'P']),
+            'alamat' => $this->faker->streetAddress(),
+            'agama' => $this->faker->city(),
+            'sts_perkawinan' => $this->faker->randomElement(['S', 'B']),
+            'pekerjaan' => $this->faker->jobTitle(),
+            'warganegara' => $this->faker->country(),
         ];
     }
 }

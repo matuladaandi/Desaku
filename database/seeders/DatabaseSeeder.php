@@ -16,46 +16,47 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Warga::factory(10)->create();
         // User::factory(10)->create();
         // membuat data palsu
-        User::create([
-            'name' => 'andi',
-            'username' => 'andi12',
-            'email' => 'matuladaandi@gmail.com',
-            'password' => bcrypt('password')
-        ]);
+        // User::create([
+        //     'name' => 'andi',
+        //     'username' => 'andi12',
+        //     'email' => 'matuladaandi@gmail.com',
+        //     'password' => bcrypt('password')
+        // ]);
 
-        Warga::create([
-            'nik' => '153416231235',
-            'nama' => 'andi',
-            'ttl' => 'Dompu, 06 April 2000',
-            'j_klmn' => 'L',
-            'alamat' => 'Desa oo',
-            'agama' => 'islam',
-            'sts_perkawinan' => 'B',
-            'pekerjaan' => 'mahasiswa',
-            'warganegara' => 'indonesia'
-        ]);
+        // Warga::create([
+        //     'nik' => '153416231235',
+        //     'nama' => 'andi',
+        //     'ttl' => 'Dompu, 06 April 2000',
+        //     'j_klmn' => 'L',
+        //     'alamat' => 'Desa oo',
+        //     'agama' => 'islam',
+        //     'sts_perkawinan' => 'B',
+        //     'pekerjaan' => 'mahasiswa',
+        //     'warganegara' => 'indonesia'
+        // ]);
 
-        User::create([
-            'name' => 'andi2',
-            'username' => 'andi122',
-            'email' => 'matuladaandi2@gmail.com',
-            'password' => bcrypt('password')
-        ]);
+        // User::create([
+        //     'name' => 'andi2',
+        //     'username' => 'andi122',
+        //     'email' => 'matuladaandi2@gmail.com',
+        //     'password' => bcrypt('password')
+        // ]);
 
-        Warga::create([
-            'nik' => '15341622331235',
-            'nama' => 'dayat',
-            'ttl' => 'Dompu, 06 April 2000',
-            'j_klmn' => 'L',
-            'alamat' => 'Desa oo',
-            'agama' => 'islam',
-            'sts_perkawinan' => 'S',
-            'pekerjaan' => 'mahasiswa',
-            'warganegara' => 'indonesia'
-        ]);
+        // Warga::create([
+        //     'nik' => rand(2, 50),
+        //     'nama' => 'dayats',
+        //     'ttl' => 'Dompu, 06 April 2000',
+        //     'j_klmn' => 'L',
+        //     'alamat' => 'Desa oo',
+        //     'agama' => 'islam',
+        //     'sts_perkawinan' => 'S',
+        //     'pekerjaan' => 'mahasiswa',
+        //     'warganegara' => 'indonesia'
+        // ]);
 
-        // Warga::factory(10)->create();
+
     }
 }
