@@ -1,21 +1,19 @@
 @extends('layouts.main')
 
 @section('container')
-<a href="/wargaCreate" class="btn btn-primary mt-2">Tambah Warga</a>
 <table class="table table-hover">
     <thead>
       <tr>
         <th scope="col">No</th>
         <th scope="col">NIK</th>
         <th scope="col">Nama</th>
-        <th scope="col">Tempat,Tgl Lahir</th>
+        <th scope="col">Tanggal Lahir</th>
         <th scope="col">Jenis Kelamin</th>
         <th scope="col">Alamat</th>
         <th scope="col">Agama</th>
         <th scope="col">Status Perkawinan</th>
         <th scope="col">Pekerjaan</th>
         <th scope="col">Kewarganegaraan</th>
-        <th scope="col">Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -31,8 +29,6 @@
             <td>{{ $item->sts_perkawinan }}</td>
             <td>{{ $item->pekerjaan }}</td>
             <td>{{ $item->warganegara }}</td>
-            <td><a href="/wargaEdit/{{ $item->id }}" class="btn btn-secondary">Edit</a></td>
-            <td><a href="/wargaDelete/{{ $item->id }}" onclick="return confirm('yakin hapus?')" class="btn btn-danger">Delete</a></td>
           </tr>
         @endforeach
     </tbody>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nik')->unique();
             $table->text('nama');
-            $table->text('ttl');
+            $table->date('ttl');
             $table->enum('j_klmn', ['L', 'P']);
             $table->text('alamat');
             $table->string('agama');
