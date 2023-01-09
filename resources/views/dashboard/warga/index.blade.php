@@ -31,7 +31,7 @@
                   <th scope="col">No</th>
                   <th scope="col">NIK</th>
                   <th scope="col">Nama</th>
-                  <th scope="col">TTL</th>
+                  <th scope="col">Tanggal Lahir</th>
                   <th scope="col">J. Kelamin</th>
                   <th scope="col">Alamat</th>
                   <th scope="col">Agama</th>
