@@ -39,6 +39,10 @@ Route::resource('/dashboard/user', DashboardAdmin::class)->except('show')->middl
 
 Route::resource('/dashboard/warga', DashboardWargaController::class)->middleware('auth');
 
+// cetak data warga
+Route::get('/cetakWarga', 'CetakWargaController@index');
+Route::get('/cetakWarga/cetak_pdf', 'CetakWargaController@cetak_pdf');
+
 // midtest
 Route::get('/midtest', [MidtestController::class, 'index']);
 Route::get('/create', [MidtestController::class, 'create']);
